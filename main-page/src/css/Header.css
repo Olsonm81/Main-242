@@ -1,4 +1,11 @@
-header {
-    background-color: azure;
-    border:2px solid purple;
+/*By Matthew Olson CSCE 242*/
+
+#head {
+    display: flex;
+    max-width:100%;
+    justify-content: center;
+    align-items: center;
+}
+#head-logo{
+    margin-right:50px;
 }

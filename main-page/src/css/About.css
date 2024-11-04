@@ -1,0 +1,71 @@
+/*By Matthew Olson CSCE 242*/
+:root {
+    --about-background-color:lightgray;
+    --about-text-box-background-color:white;
+    --about-border-color:darkred;
+}
+
+/*About us page*/
+/*main box on the page*/
+#about-section {
+    background-color: var(--about-background-color);
+    padding:50px;
+    display:flex;
+    flex-direction: column;
+    border: 2px solid var(--about-border-color);
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    width:60%;
+    gap:20px;
+}
+.about-info {
+    display:flex;
+    align-items: center;
+    gap:200px;
+    flex-wrap: wrap;
+    margin: 50px 50px;
+    
+}
+.about-info img {
+    border-radius: 10px;
+    border:2px solid var(--about-border-color);
+}
+/*centers and adds padding to the text in the boxes*/
+#about-section h3 {
+    text-align: center;
+}
+#about-section p {
+    padding:20px;
+}
+
+/*color and warp each box with words*/
+#what-d {
+    border-radius: 10px;
+    background-color: var(--about-text-box-background-color);
+    flex:3;
+}
+#what-b {
+    border-radius: 10px;
+    background-color: var(--about-text-box-background-color);
+    flex:1;
+}
+
+/* Smaller Resolutions */
+@media only screen and (max-width: 600px) {
+
+    /*main box on the page*/
+    #about-section {
+        width:85%;
+        padding:20px;
+        margin:10px auto;
+    }
+    .about-info {
+        flex-direction: column;
+        gap:20px;
+        margin: 20px 0;
+    }
+    .about-info img {
+        width:100%;
+    }
+}

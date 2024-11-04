@@ -1,0 +1,57 @@
+/*By Matthew Olson CSCE 242*/
+
+:root {
+    /*Colors for contact us page*/
+    --contact-background-color:gray;
+    --contact-border-color:darkred;
+    --contact-textbox-color:white;
+    --contact-submit-text-color:white;
+    --contact-submit-text-hover-color:white;
+    --contact-submit-hover-border-color:white;
+}
+/*Contact us page*/
+.contact-info {
+    background-color: var(--contact-background-color);
+    border: 2px solid var(--contact-border-color);
+    margin-top:15px;
+    max-width: 70%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.contact-info h2 {
+    text-align: center;
+}
+.contact-info h3 {
+    margin-left:10px;
+}
+.contact-info p {
+    background-color: var(--contact-textbox-color);
+    border: 2px solid var(--contact-border-color);
+    padding:5px;
+    margin:5px;
+}
+/*submit button styling*/
+#submit ul {
+    list-style-type: none;
+    padding:25px;
+    text-align: center;
+    width:fit-content;
+    margin: 0 auto;
+}
+#submit a {
+    text-decoration: none;
+    font-size: large;
+    padding:10px;
+}
+/*change color when hovering over submit*/
+#submit a:hover {
+    color: var(--contact-submit-text-hover-color);
+    background-color: var(--contact-submit-hover-background-color);
+    border: 2px solid var(--contact-submit-hover-border-color);
+}
+#submit {
+    font-size: x-large;
+    padding:15px;
+    padding-left:25px;
+    padding-right:25px;
+}

@@ -1,0 +1,26 @@
+/*By Matthew Olson CSCE 242*/
+:root {
+    --map-border-color:darkred;
+}
+
+
+/*Where we've been page*/
+.map-info {
+    width:fit-content;
+    margin: 0 auto;
+    margin-top:10px;
+    border: 3px solid var(--map-border-color);
+}
+.map-info img {
+    width:auto;
+    height:700px;
+}
+
+/* Smaller Resolutions */
+@media only screen and (max-width: 600px) {
+    /*Map section*/
+    .map-info img {
+        height:300px;
+    }
+
+  }

@@ -1,0 +1,75 @@
+/*By Matthew Olson CSCE 242*/
+:root {
+    --train-background-color:lightgray;
+    --train-text-background-color:white;
+    --train-border-color:darkred;
+    --train-header-background-color:skyblue;
+}
+
+/*Training/Certificates*/
+.train-info {
+    background-color: var(--train-background-color);
+    border: 2px solid var(--train-border-color);
+    margin-top:15px;
+    max-width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    gap:20px;
+    align-items: center;
+}
+.train-info div {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.train-info img {
+    width:300px;
+    height:200px;
+    margin:0px auto;
+    border-radius: 10px;
+    border: 2px solid var(--train-border-color);
+}
+
+.train-info a {
+    justify-content: center;
+    margin: 10px auto;
+    text-decoration: none;
+    background-color: var(--train-background-color);
+    border: 2px solid var(--train-border-color);
+    color: var(--main-four-boxes-text-background-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.train-info h3 {
+    text-align: center;
+}
+
+.train-info p {
+    background-color :var(--train-text-background-color);
+    border: 2px solid var(--train-border-color);
+    border-radius: 10px;
+    padding:5px;
+    margin:5px;
+    width:60%;
+    margin: 0 auto;
+}
+/*Visability*/
+.hidden {
+    display:none;
+}
+.hidden-small {
+    display:none;
+}
+/* Smaller Resolutions */
+@media only screen and (max-width: 600px) {
+    /*Training/Certificates*/
+    .train-info {
+        flex-direction: column;
+    }
+
+    .train-info p {
+        width:90%;
+    }
+
+  }

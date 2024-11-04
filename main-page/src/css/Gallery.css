@@ -1,0 +1,60 @@
+/*By Matthew Olson CSCE 242*/
+:root {
+    --gallery-background-color:lightgray;
+    --gallery-text-box-background-color:white;
+    --gallery-border-color:darkred;
+}
+
+/*Gallery page*/
+#gallery-section {
+    background-color: var(--gallery-background-color);
+    padding:50px;
+    border: 2px solid var(--gallery-border-color);
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    width:90%;
+}
+.gallery-info {
+    display:flex;
+    gap:150px;
+    flex-wrap: wrap;
+}
+.gallery-info img {
+    border:2px solid var(--gallery-border-color);
+    border-radius: 10px;
+}
+#gallery-section h3 {
+    text-align: center;
+}
+#gallery-section p {
+    padding:20px;
+}
+#arizona {
+    background-color: var(--gallery-text-box-background-color);
+    border-radius: 10px;
+    flex:1;
+}
+#washington {
+    background-color: var(--gallery-text-box-background-color);
+    border-radius: 10px;
+    flex:1;
+}
+
+/* Smaller Resolutions */
+@media only screen and (max-width: 600px) {
+    /*Gallery section*/
+    #gallery-section {
+        width:85%;
+        padding:20px;
+        margin:10px auto;
+    }
+    .gallery-info {
+        flex-direction: column;
+        gap:20px;
+    }
+    #gal img {
+        margin:0px auto;
+    }
+
+  }
