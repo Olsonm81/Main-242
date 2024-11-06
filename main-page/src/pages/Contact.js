@@ -56,6 +56,16 @@ const Contact = () => {
                     </iframe>
                 </div>
             </section>
+        <footer class="contact-info" id="contactFooter">
+          <p>Icons created by:
+            <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Dave Gandy - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Uniconlabs - Flaticon</a> 
+            <a href="https://www.flaticon.com/free-icons/location" title="location icons">Location icons created by Freepik - Flaticon</a></p>
+              <p>Emergency Response Fire Medical, LLC
+              Spartanburg, South Carolina, United States
+              1-760-445-4477 
+              Copyright © 2024 Emergency Response Fire Medical, LLC - All Rights Reserved.</p>
+        </footer>
 
         </>
     );
