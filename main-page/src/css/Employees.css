@@ -11,6 +11,8 @@
     background-color: var(--employee-background-color);
     border: solid 2px var(--employee-border-color);
     margin-top: 15px;
+    width:50%;
+    margin: 0px auto;
 }
 .employee-info h2 {
     text-align: center;
