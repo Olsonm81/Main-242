@@ -2,6 +2,7 @@
 
 import {Outlet, Link} from "react-router-dom";
 import "./css/Layout.css";
+import React from 'react';
 import HeaderBox from "./components/HeaderBoxes";
 
 const LayoutBoxes = () => {
