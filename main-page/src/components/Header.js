@@ -1,6 +1,7 @@
 /*By Matthew Olson CSCE 242*/
 /*Main header for the site*/
 import "../css/Header.css";
+import React from 'react';
 
 const Header = () => {
 

@@ -1,4 +1,5 @@
 import "../css/GalleryInfo.css";
+import React from 'react';
 
 const GalleryInfo = (galleryInfomation) => {
     const imageSrc = `${galleryInfomation.images}`;

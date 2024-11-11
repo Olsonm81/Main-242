@@ -1,5 +1,6 @@
 /*By Matthew Olson CSCE 242*/
 import "../css/About.css";
+import React from 'react';
 
 const importAll = (resource) => {
     return resource.keys().map(resource);

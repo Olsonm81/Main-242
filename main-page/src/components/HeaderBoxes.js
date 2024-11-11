@@ -1,6 +1,7 @@
 /*By Matthew Olson CSCE 242*/
 /*Same as the normal header just used with the different layout*/
 import "../css/Header.css";
+import React from 'react';
 
 const HeaderBoxes = () => {
 

@@ -1,4 +1,5 @@
 import "../css/Map.css";
+import React from 'react';
 
 const importAll = (resource) => {
     return resource.keys().map(resource);

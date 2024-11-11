@@ -1,5 +1,6 @@
 import {Outlet, Link} from "react-router-dom";
 import "./css/Layout.css";
+import React from 'react';
 import Header from "./components/Header";
 const Layout = () => {
     /*Main header for the main site page*/
