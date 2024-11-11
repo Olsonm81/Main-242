@@ -48,9 +48,23 @@
     padding:15px;
     line-height: 25px;
 }
+#team-members {
+    display: flex;
+    flex-wrap: wrap;
+}
+#team-members img{
+    width:200px;
+    height:250x;
+}
+.employeeBio {
+    background-color:white;
+    border: 2px solid var(--employee-border-color);
+    padding:25px;
+    margin:10px;
+}
 
 /* Smaller Resolutions */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
     /*Employee page*/
     .employee-info {
         padding:10px;

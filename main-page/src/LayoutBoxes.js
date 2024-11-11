@@ -3,6 +3,7 @@
 import {Outlet, Link} from "react-router-dom";
 import "./css/Layout.css";
 import HeaderBox from "./components/HeaderBoxes";
+
 const LayoutBoxes = () => {
     /*This nav contains all of the links and is used for every site other then the main*/
     return (
