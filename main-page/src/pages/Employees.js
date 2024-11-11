@@ -11,9 +11,6 @@ const Employees = () => {
     const group = importAll(
         require.context("../images/About", false, /\.(png|jpe?g|svg$)/)
     );
-    const employees = importAll(
-        require.context("../images/employees", false, /\.(png|jpe?g|svg$)/)
-    );
 
     /*About section talks about the team and shows the team in action*/
     /*Working to add individual pictures and descriptions of all of the employees*/
