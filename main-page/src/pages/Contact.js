@@ -13,24 +13,78 @@ const Contact = () => {
     const icon = importAll(
         require.context("../images/Icons", false, /\.(png|jpe?g|svg$)/)
     );
-
     return (
         <>
             <section id="contact-section">
-                <div class="contact-info">
-                    <h2>Reach out to find more!</h2>
-                    <h3>Name</h3>
-                    <p>Enter your Name</p>
-                    <h3>Email</h3>
-                    <p>Enter your email</p>
-                    <h3>Phone Number</h3>
-                    <p>Enter your Phone Number</p>
-                    <h3>Comments</h3>
-                    <p>Type here</p>
-                    <div id="centerButton">
-                        <button id="submit">Submit</button>
-                    </div>
-                    
+                <div class="contact-info" id="contact-information">
+                    <h3>Reach out to find more!</h3>
+                    <form
+                        id="contact-form"
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                    >
+                        <input
+                        type="hidden"
+                        name="access_key"
+                        value="78ad6aeb-612d-457e-a1df-7e3220ddf49d"
+                        />
+            
+                        <p>
+                        <label for="name">Name:</label>
+                        <input
+                            id="name"
+                            type="text"
+                            placeholder="Enter your name"
+                            name="name"
+                            required
+                        />
+                        </p>
+                        <p>
+                        <label for="email">Email:</label>
+                        <input 
+                            id="email" 
+                            type="email" 
+                            name="email" 
+                            placeholder="Enter your Email"
+                            required 
+                        />
+                        </p>
+                        <p>
+                        <label for="phone">Phone Number:</label>
+                        <input
+                            id="phone"
+                            type="text"
+                            name="phone"
+                            placeholder="Enter your Phone Number"
+                            required
+                            />
+                        </p>
+                        <p>
+                        <label for="Interested in">Interested in:</label>
+                        <textarea id="interest" name="Interested in" placeholder="I'm interested in..."></textarea>
+                        </p>
+                        <p>
+                        <label for="Other Notes">Other Notes:</label>
+                        <textarea id="otherNotes" name="Other Notes" placeholder="Other notes"></textarea>
+                        </p>
+                        <input
+                        type="hidden"
+                        name="redirect"
+                        value="https://web3forms.com/success"
+                        />
+                        <input
+                        type="hidden"
+                        name="subject"
+                        value="Contact from ERFM LLC"
+                        />
+
+                        <p id="result" class="hidden" ><strong></strong></p>
+
+                        <input type="hidden" name="from_name" value="My Website" />
+                        <div id="centerButton">
+                            <button id="submit" type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
                 <div id="ourInfo-Location">
                     <div class="contact-info" id="ourInfo">
