@@ -32,8 +32,8 @@ const Home = () => {
         </section>
         
         <section id="different-pages">
-            <div class="boxes">
-                <section class="small-columns">
+            <div className="boxes">
+                <section className="small-columns">
                     <Link to="/training">
                             <div id="train-cerf">
                                 <img src={images[2]} alt="Training/Certificates" />
@@ -43,8 +43,8 @@ const Home = () => {
                 </section>
             </div>
 
-            <div class="boxes">
-                <section class="small-columns">
+            <div className="boxes">
+                <section className="small-columns">
                 <Link to="/gallery">
                         <div id="gallery">
                         <img src={images[1]} alt="Gallery page" />
@@ -54,8 +54,8 @@ const Home = () => {
                 </section>
             </div>
 
-            <div class="boxes">
-                <section class="small-columns">
+            <div className="boxes">
+                <section className="small-columns">
                 <Link to="/map">
                         <div id="whereBeen">
                         <img src={images[3]} alt="Locations we have been to page" />
@@ -65,8 +65,8 @@ const Home = () => {
                 </section>
             </div>
 
-            <div class="boxes">
-                <section class="small-columns">
+            <div className="boxes">
+                <section className="small-columns">
                 <Link to="/employees">
                         <div id="employees">
                         <img src={images[0]} alt="Employee pages" />

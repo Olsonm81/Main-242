@@ -1,18 +1,40 @@
 import {Outlet, Link} from "react-router-dom";
 import "./css/Layout.css";
+import {useState} from 'react';
 import React from 'react';
 import Header from "./components/Header";
 const Layout = () => {
     /*Main header for the main site page*/
+    const [menuOpen, SetMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        SetMenuOpen(!menuOpen);
+    }
+
     return (
+
         <>
             <Header />
 
-            <nav id="main-nav">
-                <Link to="/">Home</Link>
-                <Link to="/about">About Us</Link>
-                <Link to="/contact">Contact Us</Link>
+            <div id="toggle" onClick={(toggleMenu)}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+            </div>
+            <nav id="main-nav" className={menuOpen ? "" : "hide-small"}>
+                <ul>
+                    <li>
+                    <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                    <Link to="/about">About Us</Link>
+                    </li>
+                    <li>
+                    <Link to="/contact">Contact Us</Link>
+                    </li>
+                </ul> 
             </nav>
+
             <Outlet />
         </>
     );
