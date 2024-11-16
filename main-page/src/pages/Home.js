@@ -1,6 +1,7 @@
 import "../css/Home.css";
 import { Link } from "react-router-dom";
 import React from 'react';
+import MainBoxes from "../components/MainBoxes";
 
 const importAll = (resource) => {
     return resource.keys().map(resource);
@@ -30,7 +31,9 @@ const Home = () => {
                     knowledge to provide exceptional care no matter the situation.</p>
             </div>
         </section>
-        
+        <MainBoxes>
+            
+        </MainBoxes>
         <section id="different-pages">
             <div className="boxes">
                 <section className="small-columns">

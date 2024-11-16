@@ -27,6 +27,18 @@ const Layout = () => {
                     <Link to="/">Home</Link>
                     </li>
                     <li>
+                    <Link to="/training">Training/Certificates</Link>
+                    </li>
+                    <li>
+                    <Link to="/gallery">Gallery</Link>
+                    </li>
+                    <li>
+                    <Link to="/employees">Employees</Link>
+                    </li>
+                    <li>
+                    <Link to="/map">Map</Link>
+                    </li>
+                    <li>
                     <Link to="/about">About Us</Link>
                     </li>
                     <li>

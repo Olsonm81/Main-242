@@ -4,10 +4,33 @@ import React from 'react';
 const importAll = (resource) => {
     return resource.keys().map(resource);
 };
-
-const Contact = () => {
-    /*This contact section is one that I used when starting the project*/
-    /*Once we learn how to do the Iframe and forms I will make it look like the previous contact us page*/
+/*Function from the web3 school website*/
+//Added my personal access key
+//Functions purpose is to prevent the default of redirecting the site to web3 submit
+function Contact() {
+    const [result, setResult] = React.useState("");
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "78ad6aeb-612d-457e-a1df-7e3220ddf49d");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    };
 
     /*Gets the images from the about file*/
     const icon = importAll(
@@ -18,74 +41,52 @@ const Contact = () => {
             <section id="contact-section">
                 <div class="contact-info" id="contact-information">
                     <h3>Reach out to find more!</h3>
-                    <form
-                        id="contact-form"
-                        action="https://api.web3forms.com/submit"
-                        method="POST"
-                    >
-                        <input
-                        type="hidden"
-                        name="access_key"
-                        value="78ad6aeb-612d-457e-a1df-7e3220ddf49d"
-                        />
-            
-                        <p>
-                        <label for="name">Name:</label>
-                        <input
-                            id="name"
-                            type="text"
-                            placeholder="Enter your name"
-                            name="name"
-                            required
-                        />
-                        </p>
-                        <p>
-                        <label for="email">Email:</label>
-                        <input 
-                            id="email" 
-                            type="email" 
-                            name="email" 
-                            placeholder="Enter your Email"
-                            required 
-                        />
-                        </p>
-                        <p>
-                        <label for="phone">Phone Number:</label>
-                        <input
-                            id="phone"
-                            type="text"
-                            name="phone"
-                            placeholder="Enter your Phone Number"
-                            required
-                            />
-                        </p>
-                        <p>
-                        <label for="Interested in">Interested in:</label>
-                        <textarea id="interest" name="Interested in" placeholder="I'm interested in..."></textarea>
-                        </p>
-                        <p>
-                        <label for="Other Notes">Other Notes:</label>
-                        <textarea id="otherNotes" name="Other Notes" placeholder="Other notes"></textarea>
-                        </p>
-                        <input
-                        type="hidden"
-                        name="redirect"
-                        value="https://web3forms.com/success"
-                        />
-                        <input
-                        type="hidden"
-                        name="subject"
-                        value="Contact from ERFM LLC"
-                        />
+                    <form onSubmit={onSubmit}>
+                            <p>
+                                <label for="name">Name:</label>
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Enter your name"
+                                    name="name"
+                                    required
+                                />
+                            </p>    
+                            <p>
+                                <label for="email">Email:</label>
+                                <input 
+                                    id="email" 
+                                    type="email" 
+                                    name="email" 
+                                    placeholder="Enter your Email"
+                                    required 
+                                />
+                            </p>
+                            <p>
+                                <label for="phone">Phone Number:</label>
+                                <input
+                                    id="phone"
+                                    type="text"
+                                    name="phone"
+                                    placeholder="Enter your Phone Number"
+                                    required
+                                    />
+                            </p>
+                            <p>
+                                <label for="Interested in">Interested in:</label>
+                                <textarea id="interest" name="Interested in" placeholder="I'm interested in..."></textarea>
+                            </p>
+                            <p>
+                                <label for="Other Notes">Other Notes:</label>
+                                <textarea id="otherNotes" name="Other Notes" placeholder="Other notes"></textarea>
+                            </p>
+                            <div id="centerButton">
+                                <button  id="submit" type="submit">Submit Form</button>
+                            </div>
+                        </form>
+                        <p id="results" className="hidden"><span id="result">{result}</span></p>
 
-                        <p id="result" class="hidden" ><strong></strong></p>
-
-                        <input type="hidden" name="from_name" value="My Website" />
-                        <div id="centerButton">
-                            <button id="submit" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
                 <div id="ourInfo-Location">
                     <div class="contact-info" id="ourInfo">
                         <h3>Where you can find us!</h3>
