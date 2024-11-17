@@ -54,7 +54,7 @@ const AddDialog = (props) => {
             </span>
             <form id="add-property-form" onSubmit={onSubmit}>
               <p>
-                <label htmlFor="state ">State: </label>
+                <label htmlFor="state">State: </label>
                 <input type="text" id="state" name="state" required value={inputs.state || ""} onChange={(handleChange)} />
               </p>
               <p>

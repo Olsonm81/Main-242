@@ -42,7 +42,7 @@
 }
 #add-button {
     background-color: var(--gallery-background-color);
-    margin-left:45px;
+    margin-left:95px;
     text-align: center;
     width:fit-content;
     margin-top:15px;
@@ -79,7 +79,9 @@
         margin:0px auto;
     }
     #add-button{
-        margin-left:12px;
+        text-align: center;
+        margin:0px auto;
+        margin-top: 15px;
     }
 
   }

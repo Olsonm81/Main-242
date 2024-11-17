@@ -31,10 +31,8 @@
 #gallery-section p {
     padding:20px;
     line-height: 2;
-    
     background-color: var(--gallery-text-box-background-color);
     border-radius: 10px;
-
 }
 #state {
     background-color: var(--gallery-text-box-background-color);
