@@ -1,5 +1,4 @@
 import "../css/Home.css";
-import { Link } from "react-router-dom";
 import React from 'react';
 import MainBoxes from "../components/MainBoxes";
 
@@ -31,53 +30,36 @@ const Home = () => {
                     knowledge to provide exceptional care no matter the situation.</p>
             </div>
         </section>
-        <MainBoxes>
-            
-        </MainBoxes>
+
         <section id="different-pages">
-            <div className="boxes">
-                <section className="small-columns">
-                    <Link to="/training">
-                            <div id="train-cerf">
-                                <img src={images[2]} alt="Training/Certificates" />
-                                <p>Training/Certificates</p>
-                            </div>
-                    </Link>
-                </section>
-            </div>
-
-            <div className="boxes">
-                <section className="small-columns">
-                <Link to="/gallery">
-                        <div id="gallery">
-                        <img src={images[1]} alt="Gallery page" />
-                            <p>Gallery</p>
-                        </div>
-                    </Link>
-                </section>
-            </div>
-
-            <div className="boxes">
-                <section className="small-columns">
-                <Link to="/map">
-                        <div id="whereBeen">
-                        <img src={images[3]} alt="Locations we have been to page" />
-                            <p>Where we've been</p>
-                        </div>
-                    </Link>
-                </section>
-            </div>
-
-            <div className="boxes">
-                <section className="small-columns">
-                <Link to="/employees">
-                        <div id="employees">
-                        <img src={images[0]} alt="Employee pages" />
-                            <p>Employees</p>
-                        </div>
-                    </Link>
-                </section>
-            </div>
+            <MainBoxes
+                link={"/training"}
+                id={"train-cerf"}
+                image={images[2]}
+                alt={"Training/Certificates"}
+                text={"Training/Certificates"}
+            />
+            <MainBoxes
+                link={"/gallery"}
+                id={"gallery"}
+                image={images[1]}
+                alt={"Gallery page"}
+                text={"Gallery"}
+            />
+            <MainBoxes
+                link={"/map"}
+                id={"whereBeen"}
+                image={images[3]}
+                alt={"Locations we have been to page"}
+                text={"Where we've been"}
+            />
+            <MainBoxes
+                link={"/employees"}
+                id={"employees"}
+                image={images[0]}
+                alt={"Employee pages"}
+                text={"Employees"}
+            />
         </section>
         </>
 
