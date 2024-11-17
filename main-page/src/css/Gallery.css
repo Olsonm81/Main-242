@@ -40,6 +40,28 @@
     border-radius: 10px;
     flex:1;
 }
+#add-button {
+    background-color: var(--gallery-background-color);
+    margin-left:45px;
+    text-align: center;
+    width:fit-content;
+    margin-top:15px;
+    padding:5px;
+    padding-left:15px;
+    padding-right:15px;
+    border: 2px solid var(--gallery-border-color);
+}
+#add-gallery {
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:5px;
+    font-size: x-large;
+    padding-bottom:5px;
+}
+
+#gal {
+    position: relative;
+}
 
 /* Smaller Resolutions */
 @media only screen and (max-width: 600px) {
@@ -55,6 +77,9 @@
     }
     #gal img {
         margin:0px auto;
+    }
+    #add-button{
+        margin-left:12px;
     }
 
   }

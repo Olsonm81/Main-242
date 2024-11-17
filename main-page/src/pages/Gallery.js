@@ -8,7 +8,9 @@ const Gallery = () => {
     /*This page is where I would have added the JSON information*/
     return (
         <>
-            <GallerySections/>
+            <div id="gal">
+                <GallerySections/>
+            </div>
         </>
     );
 };
