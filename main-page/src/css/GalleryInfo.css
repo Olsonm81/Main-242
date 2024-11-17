@@ -36,12 +36,7 @@
     border-radius: 10px;
 
 }
-#Oregon {
-    background-color: var(--gallery-text-box-background-color);
-    border-radius: 10px;
-    flex:1;
-}
-#Arizona {
+#state {
     background-color: var(--gallery-text-box-background-color);
     border-radius: 10px;
     flex:1;

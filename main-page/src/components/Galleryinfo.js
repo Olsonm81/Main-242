@@ -7,7 +7,7 @@ const GalleryInfo = (galleryInfomation) => {
     return (
         <div class="gallery-info">
             <img src={imageSrc} alt={galleryInfomation.state}/>
-            <div id={galleryInfomation.state}>
+            <div id="state">
                 <h3>{galleryInfomation.state}</h3>
                 <p>{galleryInfomation.description}</p>
             </div>
