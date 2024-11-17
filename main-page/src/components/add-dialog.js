@@ -15,7 +15,7 @@ const AddDialog = (props) => {
         const formData = new FormData(e.target);
         console.log(...formData);
 
-        const response = await fetch("http://localhost:3001/api/gallery" , {
+        const response = await fetch("https://main-242-backend.onrender.com/api/gallery" , {
             method: "POST",
             body: formData,
         });

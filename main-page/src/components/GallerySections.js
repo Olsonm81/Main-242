@@ -11,7 +11,7 @@ const GallerySections = () => {
 
     useEffect(() => {
       (async () => {
-        const response = await axios.get("http://localhost:3001/api/gallery");
+        const response = await axios.get("https://main-242-backend.onrender.com/api/gallery");
         setGallerys(response.data);
       })();
     }, []);
