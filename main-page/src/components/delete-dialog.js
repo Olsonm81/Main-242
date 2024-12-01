@@ -6,7 +6,7 @@ const DeleteDialog = (props) => {
     const [result, setResult] = useState("");
 
     const deleteGalleyInfo = async() => {
-        const response = await fetch(`http://localhost:3001/api/gallery/${props._id}`,{
+        const response = await fetch(`https://main-242-backend.onrender.com/api/gallery/${props._id}`,{
             method:"DELETE"
         });
         
