@@ -92,21 +92,22 @@
     display: flex;
 }
 #address img {
-    padding-top:10px;
+    margin-top:10px;
 }
 #phoneNumber {
     display: flex;
     width: fit-content;
 }
 #phoneNumber img {
-    padding-top:10px;
+    margin-top:10px;    
+
 }
 #emailUs {
     display: flex;
     width: fit-content;
 }
 #emailUs img {
-    padding-top:10px;
+    margin-top:10px;
 }
 /*submit button styling*/
 /*centers the button*/

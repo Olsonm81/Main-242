@@ -8,42 +8,42 @@ const AddDialog = (props) => {
     const [result, setResults] = useState("");
 
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
+  const handleChange = (e) => {
+      const name = e.target.name;
+      const value = e.target.value;
+      setInputs((values) => ({...values, [name]: value}));
+  }
+
+  const handleImageChange = (e) => {
+      const name = e.target.name;
+      const value = e.target.files[0];
+      setInputs((values) => ({...values, [name]: value}));
+  }
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
         setResults("Sending to server....");
 
-        const formData = new FormData(e.target);
+        const formData = new FormData(event.target);
         console.log(...formData);
 
-        const response = await fetch("https://main-242-backend.onrender.com/api/gallery" , {
+        const response = await fetch("https://main-242-backend.onrender.com/api/gallery/" , {
             method: "POST",
             body: formData,
         });
 
         if(response.status === 200) {
             setResults("Gallery Information Successfully Added!");
-            props.AddGalleryInformation(await response.json());
-            e.target.reset();
+            props.AddToGallery(await response.json());
+            event.target.reset();
             props.closeDialog();
         } else {
-            console.log("Error adding gallery informaiton", response);
             setResults(response.message);
         }
 
 
     };
 
-    const handleChange = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setInputs((values) => ({...values, [name]: value}));
-    }
-
-    const handleImageChange = (e) => {
-        const name = e.target.name;
-        const value = e.target.files[0];
-        setInputs((values) => ({...values, [name]: value}));
-    }
 
     return (
         <div id="add-dialog" className="w3-modal">

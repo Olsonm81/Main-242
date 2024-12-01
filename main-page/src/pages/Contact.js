@@ -91,11 +91,11 @@ function Contact() {
                     <div class="contact-info" id="ourInfo">
                         <h3>Where you can find us!</h3>
                         <div id="address">
-                        <img src={icon[0]} alt={icon[0]}></img>
+                        <img src={icon[1]} alt={icon[1]}></img>
                         <p>Spartanburg, SC, 29301</p>
                         </div>
                         <div id="phoneNumber">
-                        <img src={icon[0]} alt={icon[0]}></img>
+                        <img src={icon[2]} alt={icon[2]}></img>
                         <p>1-760-445-4477</p>
                         </div>
                         <div id="emailUs">

@@ -11,7 +11,7 @@ const GallerySections = () => {
 
     useEffect(() => {
       (async () => {
-        const response = await axios.get("https://main-242-backend.onrender.com/api/gallery");
+        const response = await axios.get("https://main-242-backend.onrender.com/api/gallery/");
         setGallerys(response.data);
       })();
     }, []);
@@ -38,10 +38,15 @@ const GallerySections = () => {
           
         
           <div id="gallery-section">
-              {gallerys.map((galleryInfomation, index) => (
+              {gallerys.map((galleryInfomation) => (
               <GalleryInfo
-                  key={index}
+                  key={galleryInfomation.state}
+                  _id={galleryInfomation._id}
                   state={galleryInfomation.state}
+                  city={galleryInfomation.city}
+                  fe={galleryInfomation.fe}
+                  date={galleryInfomation.date}
+                  people={galleryInfomation.people}
                   description={galleryInfomation.description}
                   images = {galleryInfomation.images}
               />
