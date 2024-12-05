@@ -4,7 +4,6 @@ import EditDialog from "./edit-dialog";
 import DeleteDialog from "./delete-dialog";
 
 const GalleryInfo = (galleryInformation, city) => {
-    const imageSrc = `${galleryInformation.images}`;
     const [showEditDialog, setShowEditDialog ] = useState (false);
     const [showDeleteDialog, setShowDeleteDialog] = useState (false);
     const [ShowGalleryInfo, setShowGalleryInfo] = useState (true);
@@ -55,14 +54,14 @@ console.log(galleryInformation)
                     date={galleryInfo.date}
                     people={galleryInfo.people}
                     description={galleryInfo.description}
-                    images={imageSrc}
+                    images={galleryInformation.images}
                 />
                 ) : (
                 ""
                 )}
                 
 
-                <img src={imageSrc} alt={galleryInfo.state}/>
+                <img src={galleryInfo.images} alt={galleryInfo.state}/>
                 <div id="state">
                     <h3>{galleryInfo.state}</h3>
                     <section id="change-buttons">
